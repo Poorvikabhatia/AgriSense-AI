@@ -1,0 +1,762 @@
+/* =========================================================
+   AGRISENSE AI - DASHBOARD STYLES
+   ========================================================= */
+
+:root {
+    --green-dark: #123c2a;
+    --green: #1f6b4f;
+    --green-light: #3f8f6b;
+    --green-soft: #eaf4ee;
+
+    --background: #f5f7f5;
+    --surface: #ffffff;
+    --border: #dfe7e2;
+
+    --text-primary: #17221c;
+    --text-secondary: #66736c;
+    --text-muted: #8a958f;
+
+    --success: #247a50;
+    --warning: #a66a18;
+    --danger: #a43d3d;
+
+    --shadow: 0 8px 30px rgba(20, 55, 40, 0.07);
+
+    --radius: 18px;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+nav {
+    height: 76px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-mark {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--green-dark);
+
+    border-radius: 10px;
+}
+
+.brand-mark svg {
+    width: 22px;
+    height: 22px;
+}
+
+.brand-name {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.brand-name span {
+    color: var(--green);
+}
+
+.nav-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    background: var(--success);
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 4px rgba(36, 122, 80, 0.1);
+}
+
+
+/* =========================================================
+   MAIN WRAPPER
+   ========================================================= */
+
+.wrap {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: 430px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    padding: 70px 0 55px;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    padding: 7px 12px;
+
+    background: var(--green-soft);
+
+    border: 1px solid #d6e9dd;
+
+    border-radius: 30px;
+
+    color: var(--green);
+
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.6px;
+
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 700px;
+
+    font-family: "Fraunces", serif;
+
+    font-size: clamp(40px, 5vw, 64px);
+
+    line-height: 1.08;
+
+    letter-spacing: -1.5px;
+
+    font-weight: 600;
+
+    margin-bottom: 22px;
+}
+
+.hero-text {
+    max-width: 650px;
+
+    color: var(--text-secondary);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   DECISION CARD
+   ========================================================= */
+
+.decision-card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    padding: 30px;
+
+    box-shadow: var(--shadow);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.decision-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: var(--green);
+}
+
+.decision-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+.card-label {
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+    font-family: "IBM Plex Mono", monospace;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+
+    margin-bottom: 9px;
+}
+
+#recommendation {
+    font-family: "Fraunces", serif;
+
+    font-size: 31px;
+
+    line-height: 1.1;
+
+    color: var(--green-dark);
+}
+
+.confidence-box {
+    min-width: 85px;
+
+    text-align: right;
+}
+
+.confidence-box p {
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.6px;
+}
+
+#confidence {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--green);
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+.divider {
+    height: 1px;
+
+    background: var(--border);
+
+    margin: 28px 0;
+}
+
+.decision-meta {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.meta-item {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.meta-title {
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+    font-family: "IBM Plex Mono", monospace;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+.meta-item strong {
+    color: var(--text-primary);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.section {
+    padding: 35px 0;
+}
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.section-header h3 {
+    font-family: "Fraunces", serif;
+
+    font-size: 26px;
+
+    font-weight: 600;
+}
+
+.refresh-text {
+    color: var(--text-muted);
+
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   SENSOR CARDS
+   ========================================================= */
+
+.sensor-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.sensor-card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 27px;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.sensor-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #c8d9ce;
+
+    box-shadow: 0 12px 35px rgba(20, 55, 40, 0.1);
+}
+
+.sensor-title {
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 13px;
+}
+
+.sensor-card h2 {
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 34px;
+
+    font-weight: 600;
+
+    letter-spacing: -1px;
+
+    color: var(--green-dark);
+
+    margin-bottom: 5px;
+}
+
+.sensor-unit {
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.6px;
+}
+
+
+/* =========================================================
+   HISTORY TABLE
+   ========================================================= */
+
+.history-card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 800px;
+}
+
+thead {
+    background: #f8faf8;
+}
+
+th {
+    padding: 15px 20px;
+
+    text-align: left;
+
+    color: var(--text-muted);
+
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.6px;
+
+    text-transform: uppercase;
+
+    border-bottom: 1px solid var(--border);
+}
+
+td {
+    padding: 16px 20px;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+    border-bottom: 1px solid #edf1ee;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #fafcfb;
+}
+
+
+/* =========================================================
+   RECOMMENDATION BADGES
+   ========================================================= */
+
+.recommendation-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+.recommendation-badge.water {
+    color: var(--warning);
+
+    background: #fff5e5;
+
+    border: 1px solid #f1dfbd;
+}
+
+.recommendation-badge.no-water {
+    color: var(--success);
+
+    background: #eaf6ef;
+
+    border: 1px solid #d1e9da;
+}
+
+
+/* =========================================================
+   LOADING STATE
+   ========================================================= */
+
+.loading {
+    color: var(--text-muted);
+
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ERROR STATE
+   ========================================================= */
+
+.error-state {
+    color: var(--danger);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    width: 100%;
+
+    margin-top: 45px;
+
+    padding: 28px 20px;
+
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+    font-family: "IBM Plex Mono", monospace;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-top: 55px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .sensor-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 0 5%;
+    }
+
+    .nav-status {
+        display: none;
+    }
+
+    .wrap {
+        width: 90%;
+    }
+
+    .hero {
+        padding: 45px 0;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+    }
+
+    .decision-card {
+        padding: 23px;
+    }
+
+    .decision-header {
+        flex-direction: column;
+    }
+
+    .confidence-box {
+        text-align: left;
+    }
+
+    .decision-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+}
+
+/* =========================================================
+   SENSOR TREND CHARTS
+   ========================================================= */
+
+.charts-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.chart-card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 24px;
+
+    box-shadow: var(--shadow);
+
+    min-height: 300px;
+}
+
+.chart-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 20px;
+}
+
+.chart-title {
+    color: var(--text-primary);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 3px;
+}
+
+.chart-unit {
+    color: var(--text-muted);
+
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+.chart-card canvas {
+    width: 100% !important;
+
+    height: 210px !important;
+}
+
+
+/* Responsive charts */
+
+@media (max-width: 900px) {
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
