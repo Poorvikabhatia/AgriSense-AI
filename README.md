@@ -41,6 +41,7 @@ Machine Learning    SQLite
               |
               v
         Web Dashboard
+```
 
 ## Technology Stack
 
@@ -66,6 +67,7 @@ Machine Learning    SQLite
 ```text
 0 → No Water Needed
 1 → Water Needed
+```
 
 ## Project Structure
 
@@ -100,6 +102,7 @@ AgriSense-AI/
 ├── .gitignore
 ├── test_thingspeak.py
 └── README.md
+```
 
 ## Setup
 
