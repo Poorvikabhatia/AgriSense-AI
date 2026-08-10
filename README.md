@@ -177,6 +177,10 @@ The complete prototype has been tested with live ESP8266 sensor data and success
 
 **Sensor Data → ThingSpeak → FastAPI → ML Prediction → SQLite → Web Dashboard**
 
+## Demo Video
+
+[Watch the AgriSense AI Project Demo](https://drive.google.com/file/d/1LgVES35Y2tuZBw9sUq2GrcNd7W2DsMbE/view?usp=sharing)
+
 ## Future Scope
 
 - Automatic pump control using a relay
