@@ -192,7 +192,7 @@ The complete prototype has been tested with live ESP8266 sensor data and success
 
 ## Author
 
-**Poorvika Bhatia**
+**Poorvika Bhatia** - Team Zentrix
 
 GitHub: https://github.com/Poorvikabhatia
 
